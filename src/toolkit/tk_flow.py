@@ -39,5 +39,4 @@ def toggle(key):
     """
     while True:
         keyboard.wait(key)
-        global RUNNING
         RUNNING = not RUNNING
