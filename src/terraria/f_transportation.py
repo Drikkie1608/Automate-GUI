@@ -7,7 +7,7 @@ Biomes
 Arena, ...
 Return to slot 1 to prevent teleporting back
 """
-from tk_steam import *
+import toolkit as tk
 
 def visit(c, place):
     """

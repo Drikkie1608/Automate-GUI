@@ -1,10 +1,14 @@
 import threading
-
 import keyboard
 
 FLOW = list()
 TIMED = list()
 RUNNING = False
+
+
+def seperate_thread(function):
+    x = threading.Thread(target=function, daemon=True)
+    x.start()
 
 
 def flow():

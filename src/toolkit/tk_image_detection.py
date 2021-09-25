@@ -1,4 +1,6 @@
-from tk_essentials import *
+import pyautogui
+
+import toolkit as tk
 
 
 def detect_idle(image, confidence):
@@ -22,5 +24,6 @@ def detect_overwrite(image, confidence, trigger):
     """
     detection = detect_idle(image, confidence)
     if detection is None:
-        print("Switching to manual detection, put the mouse above %s and press %s" % image % trigger)
-        return mouse_pos(trigger)
+        print("Switching to manual detection, put the mouse above %s and press %s" %
+              image % trigger)
+        return tk.mouse_pos(trigger)

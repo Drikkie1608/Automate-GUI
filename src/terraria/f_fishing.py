@@ -1,7 +1,7 @@
-from f_transportation import *
-from f_journey import *
-from tk_calibration import *
-from tk_detection import *
+import time
+
+import terraria as te
+import toolkit as tk
 
 def calculate_time(power):
     """
@@ -14,11 +14,11 @@ def autofish(power):
     """
     Automatic fisher based on fishing power
     """
-    click()
+    tk.click()
     # sleep(calculate_time(power))
-    sleep(4)
-    click()
-    sleep(1)
+    time.sleep(4)
+    tk.click()
+    time.sleep(1)
 
 
 def specific_fishing(c, item):
@@ -26,7 +26,7 @@ def specific_fishing(c, item):
     Fishes untill it sees the correct item, not done
     """
     biome = fishing_biome(item)
-    visit(c, biome)
+    te.visit(c, biome)
 
 
 def fishing_biome(item):
@@ -41,15 +41,15 @@ def dup_routine(c):
     fish = None
     if fish is None:
         fish = input("fish not detected: " )
-        sleep(4)
+        time.sleep(4)
         #activate_screen()
 
-    knopke('esc')
-    get_dup_item(c, fish)
+    tk.knopke('esc')
+    te.get_dup_item(c, fish)
     speak_to_npc(c)
-    click(*c["fisher_quest"])  # return fish
+    tk.click(*c["fisher_quest"])  # return fish
 
-    dayskip(c)
+    te.dayskip(c)
 
 
 def speak_to_npc(c):
@@ -57,27 +57,27 @@ def speak_to_npc(c):
     Speak to an npc in a prison
     """
     # npc_middle = [n / 2 for n in [x1 + x2 for x1, x2 in zip(c["npc_left"], c["npc_right"])]]
-    rightclick(*c["npc_left"])
-    rightclick(*c["npc_middle"])
-    rightclick(*c["npc_right"])
+    tk.rightclick(*c["npc_left"])
+    tk.rightclick(*c["npc_middle"])
+    tk.rightclick(*c["npc_right"])
 
 def angler_quest_button(c):
     n = 100
     unit = (c["angler_quest_top"][1] - c["angler_quest_bottom"][1]) / n - 1
     for i in range(n):
-        click(c["angler_quest_bottom"][0], c["angler_quest_bottom"][1] + i * unit)
+        tk.click(c["angler_quest_bottom"][0], c["angler_quest_bottom"][1] + i * unit)
 
 def calibrate_fishing(screen, trigger):
-    calibrate_grid(screen, ["npc_left", "npc_middle", "npc_right"], trigger)
-    calibrate_grid(screen, ["angler_quest_top", "angler_quest_bottom"], trigger)
+    tk.calibrate_grid(screen, ["npc_left", "npc_middle", "npc_right"], trigger)
+    tk.calibrate_grid(screen, ["angler_quest_top", "angler_quest_bottom"], trigger)
 
 
 if __name__ == "__main__":
     screen = "screen2"
     #calibrate_fishing(screen, 'p')
 
-    sleep(6)
+    time.sleep(6)
 
-    c = json_to_dict(screen)
+    c = tk.json_to_dict(screen)
     dup_routine(c)
 

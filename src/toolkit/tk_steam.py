@@ -1,5 +1,4 @@
-from time import *
-
+import time
 import keyboard
 import pyautogui
 
@@ -9,9 +8,9 @@ def knopke(button):
     Press a button on your keyboard with a slight delay
     """
     keyboard.press(button)
-    sleep(0.12)
+    time.sleep(0.12)
     keyboard.release(button)
-    sleep(0.12)
+    time.sleep(0.12)
 
 
 def click(x=None, y=None):

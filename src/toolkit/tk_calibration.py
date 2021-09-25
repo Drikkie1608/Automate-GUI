@@ -1,6 +1,5 @@
 import json
-
-from tk_essentials import mouse_pos
+import toolkit as tk
 
 
 def json_to_dict(screen):
@@ -26,8 +25,9 @@ def calibrate(screen, locations, trigger):
     """
     data = json_to_dict(screen)
     for location in locations:
-        print("Hover with the mouse over {0} and press {1}".format(location, trigger))
-        data[location] = mouse_pos(trigger)
+        print("Hover with the mouse over {0} and press {1}".format(
+            location, trigger))
+        data[location] = tk.mouse_pos(trigger)
 
     dict_to_json(data, screen)
     print("Json file updated")
@@ -39,10 +39,12 @@ def calibrate_grid(screen, locations, trigger):
     Takes in a row of positions, adds the entire list to the json file
     """
 
-    print("Hover with the mouse over {0} and press {1}".format(locations[0], trigger))
-    begin = mouse_pos(trigger)
-    print("Hover with the mouse over {0} and press {1}".format(locations[-1], trigger))
-    end = mouse_pos(trigger)
+    print("Hover with the mouse over {0} and press {1}".format(
+        locations[0], trigger))
+    begin = tk.mouse_pos(trigger)
+    print("Hover with the mouse over {0} and press {1}".format(
+        locations[-1], trigger))
+    end = tk.mouse_pos(trigger)
 
     result = []
     x_unit = (end[0] - begin[0]) / (len(locations) - 1)

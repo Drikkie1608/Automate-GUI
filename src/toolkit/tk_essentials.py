@@ -1,5 +1,8 @@
-from tk_steam import *
-import threading
+import pyautogui
+import keyboard
+
+import toolkit as tk
+
 
 def mouse_pos(trigger=None):
     """
@@ -11,11 +14,13 @@ def mouse_pos(trigger=None):
     x, y = pyautogui.position()
     return x, y
 
+
 def activate_screen(screen):
     """
     Only if 2 monitors, calibration?
     """
     pass
+
 
 def manual_overwrite(possibilities):
     """
@@ -29,6 +34,5 @@ def manual_overwrite(possibilities):
     print("")
     return manual_overwrite(possibilities)
 
-def seperate_thread(function):
-    x = threading.Thread(target=function, daemon=True)
-    x.start()
+
+

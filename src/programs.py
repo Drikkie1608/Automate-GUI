@@ -1,9 +1,9 @@
+import pyautogui
 import keyboard
+import time
 
-from tk_steam import *
-from tk_toggle import *
-from tk_essentials import *
-from f_autofish import autofish
+import toolkit as tk
+import terraria as te
 
 def mining():
     """
@@ -11,24 +11,24 @@ def mining():
     """
     keyboard.wait('v')
     while True:
-        sleep(0.5)
-        click()
+        time.sleep(0.5)
+        tk.click()
 
 def idle():
     """
     Small program: Keep screen awake by switching between 2 positions
     """
-    pos1 = mouse_pos('p')
-    pos2 = mouse_pos('p')
+    pos1 = tk.mouse_pos('p')
+    pos2 = tk.mouse_pos('p')
 
     while True:
-        sleep(20)
+        time.sleep(20)
         pyautogui.moveTo(*pos1)
-        sleep(20)
+        tk.sleep(20)
         pyautogui.moveTo(*pos2)
 
 def fishing():
     power = int(input("Fishing power: "))
-    sleep(5)
+    time.sleep(5)
     while True:
-        autofish(power)
+        te.autofish(power)
