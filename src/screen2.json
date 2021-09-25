@@ -1,0 +1,174 @@
+{
+    "npc_left": [
+        -982,
+        467
+    ],
+    "npc_middle": [
+        -962,
+        467
+    ],
+    "npc_right": [
+        -942,
+        467
+    ],
+    "angler_quest": [
+        -1175,
+        250
+    ],
+    "power_menu": [
+        -1877,
+        308
+    ],
+    "dup_menu": [
+        -1872,
+        528
+    ],
+    "research_menu": [
+        -1872,
+        577
+    ],
+    "time_menu": [
+        -1872,
+        626
+    ],
+    "weather_menu": [
+        -1872,
+        675
+    ],
+    "pp_menu": [
+        -1872,
+        724
+    ],
+    "infection_toggle": [
+        -1872,
+        773
+    ],
+    "enemy_difficulty_slider": [
+        -1872,
+        822
+    ],
+    "dup_weapons": [
+        -1787,
+        366
+    ],
+    "dup_armor": [
+        -1743,
+        366
+    ],
+    "dup_vanity": [
+        -1699,
+        366
+    ],
+    "dup_blocks": [
+        -1655,
+        366
+    ],
+    "dup_furniture": [
+        -1611,
+        366
+    ],
+    "dup_accesories": [
+        -1567,
+        366
+    ],
+    "dup_equipment": [
+        -1523,
+        366
+    ],
+    "dup_consumables": [
+        -1479,
+        366
+    ],
+    "dup_tools": [
+        -1435,
+        366
+    ],
+    "dup_materials": [
+        -1391,
+        366
+    ],
+    "dup_misc": [
+        -1347,
+        366
+    ],
+    "dup_x": [
+        -1332,
+        411
+    ],
+    "dup_search": [
+        -1694,
+        415
+    ],
+    "dup_first_item": [
+        -1776,
+        453
+    ],
+    "research_window": [
+        -1741,
+        638
+    ],
+    "research_button": [
+        -1736,
+        741
+    ],
+    "time_freeze": [
+        -1812,
+        556
+    ],
+    "dawn": [
+        -1812,
+        604
+    ],
+    "noon": [
+        -1812,
+        653
+    ],
+    "dusk": [
+        -1812,
+        702
+    ],
+    "midnight": [
+        -1812,
+        751
+    ],
+    "speed_slider": [
+        -1812,
+        800
+    ],
+    "angler_quest_top": [
+        -1185,
+        0
+    ],
+    "angler_quest2": [
+        -1182,
+        270
+    ],
+    "angler_quest3": [
+        -1182,
+        325
+    ],
+    "angler_quest4": [
+        -1182,
+        379
+    ],
+    "angler_quest5": [
+        -1182,
+        434
+    ],
+    "angler_quest6": [
+        -1182,
+        488
+    ],
+    "angler_quest7": [
+        -1182,
+        543
+    ],
+    "angler_quest_bottem": [
+        -1182,
+        598
+    ],
+    "angler_quest_bottom": [
+        -1185,
+        655
+    ]
+}
